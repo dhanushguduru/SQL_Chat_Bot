@@ -3,7 +3,7 @@
 ## Usage:
 #### 1. Clone This Repository
 ```
-git clone 
+git clone <repository URL>
 ```
 #### 2. Create a Pyhton Virtual Environment
 ```
