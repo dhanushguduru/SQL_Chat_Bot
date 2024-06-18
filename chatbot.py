@@ -60,7 +60,7 @@ if selected == "SQL LLM":
     '''
     col1.markdown(css, unsafe_allow_html=True)
 
-    option = col2.selectbox('Select The Model',('Gemini Pro', 'llama3', 'llama2', "tinyllama"), index=None)
+    option = col2.selectbox('Select The Model',('Gemini Pro', "sql_tinyllama"), index=None)
 
     if option == "Gemini Pro":
         api_key = st.text_input("Enter The API Key: ",key="API Key")
@@ -95,6 +95,8 @@ if selected == "SQL LLM":
 
         else:
             response = get_stream(st, option)
+            # print(list(response))
+            # response=Query(response, "database/" + database_path.name)
             with st.chat_message("assistant"):
                 with st.status(label="Generating...", expanded=True) as status:
                     st.write_stream(response)

@@ -3,3 +3,5 @@ streamlit_option_menu
 ollama
 google-generativeai
 python-dotenv
+pandas
+numpy

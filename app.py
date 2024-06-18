@@ -1,4 +1,3 @@
-import subprocess
-
 if __name__ == "__main__":
-    subprocess.call(["streamlit", "run", "Create Database.py"])
+    import subprocess
+    subprocess.call(["streamlit", "run", "chatbot.py"])
